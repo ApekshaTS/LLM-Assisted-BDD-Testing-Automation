@@ -66,3 +66,8 @@ def step_error_message(context):
 def step_validate_cookies(context):
     cookies = context.page.context.cookies()
     assert cookies is not None
+
+@then("the dashboard should be visible to them, confirming successful authentication")
+def step_dashboard_visible_confirmed(context):
+    assert "dashboard" in context.page.url
+    assert "Welcome" in context.page.content()
