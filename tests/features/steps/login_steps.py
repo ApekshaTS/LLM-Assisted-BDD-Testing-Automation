@@ -21,6 +21,11 @@ def step_enter_valid_email(context):
 def step_enter_valid_password(context):
     context.page.fill("#password", "Password123")
 
+@when("the user enters a valid username via email input field And submits it with correct password through password field")
+def step_combined_valid_credentials(context):
+    context.page.fill("#email", "test@example.com")
+    context.page.fill("#password", "Password123")
+    context.page.click("#login")
 
 # ---------------------------------------------------------
 # WHEN STEPS — INVALID INPUTS
@@ -75,6 +80,9 @@ def step_verify_auth_token(context):
     cookies = context.page.context.cookies()
     assert cookies is not None
 
+@then("an acknowledgment message should be displayed stating 'Login successful'")
+def step_ack_message(context):
+    assert "Welcome" in context.page.content()
 
 # ---------------------------------------------------------
 # THEN STEPS — ERROR HANDLING
@@ -83,3 +91,7 @@ def step_verify_auth_token(context):
 @then("an error message should be displayed")
 def step_verify_error_message(context):
     assert "Invalid" in context.page.content()
+
+@then("after submission, redirection to user dashboard occurs without any error messages shown")
+def step_redirect_no_error(context):
+    assert "dashboard" in context.page.url

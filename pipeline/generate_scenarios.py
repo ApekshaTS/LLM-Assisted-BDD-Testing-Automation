@@ -20,20 +20,18 @@ You are an expert QA engineer.
 Your task is to convert the following requirement into **clean BDD Gherkin scenarios only**.
 
 STRICT RULES:
-- Output MUST start with: Feature: <something>
-- Then include the scenarios:
-    At least ONE positive (happy path) scenario
-    At least ONE negative scenario
-- Use ONLY Gherkin format:
-    Given
-    When
-    Then
-    And
-- Do NOT add paragraphs, descriptions, stories, or explanations.
-- Do NOT add long prose.
-- Do NOT start with “As a user…” or user stories.
-- Do NOT add extra commentary.
-- ONLY output Gherkin.
+Output MUST start with: Feature: <Title>
+Include at least ONE positive (happy path) scenario
+Include at least ONE negative scenario.
+Use ONLY Gherkin format (Given, When, Then, And).
+Do NOT add paragraphs, descriptions, stories, or explanations.
+Do NOT add long prose.
+Do NOT start with “As a user…” or user stories.
+Do NOT add extra commentary.
+DO NOT use fancy words or complex language.
+DO NOT include any text outside of the Gherkin format.
+DO NOT give lengthy steps
+ONLY output Gherkin.
 
 Here is an example of valid Gherkin output:
 Feature: Login functionality
@@ -51,7 +49,7 @@ Scenario: Invalid login attempt
   And the user clicks the login button
   Then an error message should be displayed
 
-Generate each scenario based on this format only. 
+Generate each scenario based on this format only following the rules. 
 
 Requirement:
 {requirement}
