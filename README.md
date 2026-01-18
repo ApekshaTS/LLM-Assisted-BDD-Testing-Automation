@@ -50,6 +50,8 @@ tests/features/happy_path.feature
 Approval is logged in:
 pipeline/approval_log.txt
 
+6️⃣ Automated test runs using Behave + Playwright
+Browser opens → form filled → login tested → dashboard verified.
 
 *Setup Instructions*
 ✅ 1. Clone the project
@@ -145,5 +147,3 @@ You should see:
 
 🎉 Test Successful!
 
-6️⃣ Automated test runs using Behave + Playwright
-Browser opens → form filled → login tested → dashboard verified.
