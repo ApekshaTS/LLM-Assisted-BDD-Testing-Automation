@@ -1,7 +1,7 @@
 Feature: Happy Path Scenario
 
-Scenario: Successful user authentication when provided correct email and password
+Scenario: Successful login with correct credentials
   Given the user is on the login page
-  When the user enters a valid username via email input field And submits it with correct password through password field
-  Then an acknowledgment message should be displayed stating 'Login successful'
-And after submission, redirection to user dashboard occurs without any error messages shown
+  When the user enters a legitimate email address into the username field and provides their corresponding password
+  And they click the login button without any error messages popping up
+  Then the dashboard should be visible to them, confirming successful authentication

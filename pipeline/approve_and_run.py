@@ -32,7 +32,7 @@ def main():
 
     # Run Behave test for only the happy path file
     try:
-        subprocess.run(["behave", HAPPY_PATH_FILE], check=True)
+        subprocess.run([sys.executable, "-m", "behave", HAPPY_PATH_FILE], check=True)
     except Exception as e:
         print("ERROR running Behave:", e)
         sys.exit(1)

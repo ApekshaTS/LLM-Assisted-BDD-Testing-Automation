@@ -1,13 +1,13 @@
-Feature: Login functionality using Email and Password credentials
+Feature: Login functionality using Email & Password
 
-Scenario: Successful user authentication when provided correct email and password
+Scenario: Successful login with correct credentials
   Given the user is on the login page
-  When the user enters a valid username via email input field And submits it with correct password through password field
-  Then an acknowledgment message should be displayed stating 'Login successful'
-And after submission, redirection to user dashboard occurs without any error messages shown
+  When the user enters a legitimate email address into the username field and provides their corresponding password
+  And they click the login button without any error messages popping up
+  Then the dashboard should be visible to them, confirming successful authentication
 
-Scenario: Unsuccessful authentication when provided incorrect credentials
+Scenario: Failed login attempt with incorrect credentials - negative path one
   Given the user is on the login page
-  When the user enters a valid username via email input field And attempts to submit with an incorrect password through password field
-  Then validation message should be displayed stating 'Invalid Password' and no redirection occurs
-And after submission, staying on login page without going away or redirecting anywhere
+  When the user enters a legitimate email address into the username field and provides an invalid password for their account
+  And they click the login button without any error messages popping up
+  Then no dashboard should be visible, indicating authentication failure. Instead, there may appear errors or prompts to enter correct credentials
