@@ -49,7 +49,7 @@ Scenario: Invalid login attempt
   And the user clicks the login button
   Then an error message should be displayed
 
-Generate each scenario based on this format only following the rules.
+Generate each scenario based on this format only by following all the rules. Do not include any extra text or examples.
 For every scenario, there must be at least one positive and one negative scenario. Sometimes you may need to create multiple scenarios to cover the requirement. 
 
 Requirement:
