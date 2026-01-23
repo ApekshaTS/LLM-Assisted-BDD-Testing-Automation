@@ -30,7 +30,7 @@ Do NOT start with “As a user…” or user stories.
 Do NOT add extra commentary.
 DO NOT use fancy words or complex language.
 DO NOT include any text outside of the Gherkin format.
-DO NOT give lengthy steps
+DO NOT give lengthy steps.
 ONLY output Gherkin.
 
 Here is an example of valid Gherkin output:
@@ -51,6 +51,7 @@ Scenario: Invalid login attempt
 
 Generate each scenario based on this format only by following all the rules. Do not include any extra text or examples.
 For every scenario, there must be at least one positive and one negative scenario. Sometimes you may need to create multiple scenarios to cover the requirement. 
+Both negative and positive scenarios must be included.
 
 Requirement:
 {requirement}
